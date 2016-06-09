@@ -6,10 +6,11 @@
 package stringLength;
 
 import java.util.Scanner;
+import java.util.*;
 
 public class stringLength {
 	public static String longestWord(String sen){
-		String[] wordsArr= sen.split(" ");
+		String[] wordsArr= sen.replaceAll("[^a-zA-Z ]", "").split("\\s+");
 		int test=0;
 		for(int i=0; i<wordsArr.length; i++){
 			if(wordsArr[i].length()>test){
